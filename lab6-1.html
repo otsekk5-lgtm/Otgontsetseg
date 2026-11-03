@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body style="margin: 0">
+    <canvas id = "myCanvas" width="500" height="500" style="border: 1px solid blue;"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        let x = 30;
+        let y = 30;
+        let orgon = 40
+        let ondor = 30
+        let coords = [30, 30, 110, 30, 190, 30]
+
+        ctx.beginPath();
+        ctx.rect (coords[0], coords[1], 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect (x, 90, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect (90, 90, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect (30, 150, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.rect (90, 150, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        x+=60
+        ctx.beginPath();
+        ctx.rect(x, y, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        x+=60
+        ctx.beginPath();
+        ctx.rect(x, y, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        y+=60
+        ctx.beginPath();
+        ctx.rect(x, y, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+        y+=60,
+        ctx.beginPath();
+        ctx.rect(x, y, 40, 30);
+        ctx.fillStyle = "#0095DD" ;
+        ctx.fill();
+        ctx.closePath();
+
+
+    </script>
+</body>
+</html>
