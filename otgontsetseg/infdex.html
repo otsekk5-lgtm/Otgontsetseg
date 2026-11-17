@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mashaan uraldaan</title>
+
+    <style>
+        #car1 {
+            width: 30%;
+            position: absolute;
+            margin-left: 20px;
+            margin-top: -10px;
+        }
+
+        #car2 {
+            width: 30%;
+            position: absolute;
+            margin-left: 30px;
+            margin-top: 250px;
+        }
+    </style>
+</head>
+
+<body style="margin: 0 auto;">
+
+    <div style="width: 1500px; height: 600px; background-image: url(zam.png); background-size: cover;">
+
+        <img id="car1" src="car1.png">
+        <img id="car2" src="car2.png">
+
+    </div>
+
+    <input type="text" id="command" onkeypress="uraldah(event)">
+
+    <script>
+        let car1 = document.getElementById("car1");
+        let car2 = document.getElementById("car2");
+
+        let go1 = 20;
+        let go2 = 30;
+
+        function reset() {
+            go1 = 20;
+            go2 = 30;
+
+            car1.style.marginLeft = "20px";
+            car2.style.marginLeft = "30px";
+        }
+
+        function uraldah(event) {
+
+            if (event.key == "d") {
+                go1 += 10;
+                car1.style.marginLeft = go1 + "px";
+            }
+
+            else if (event.key == "h") {
+                go2 += 10;
+                car2.style.marginLeft = go2 + "px";
+            }
+
+            if (go1 > 1000) {
+                alert("tsagaan mashaan hojloo");
+                reset();
+            }
+
+            else if (go2 > 1000) {
+                alert("ulbar shar mashaan hojloo");
+                reset();
+            }
+        }
+    </script>
+
+</body>
+</html>
